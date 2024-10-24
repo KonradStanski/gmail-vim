@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Gmail Vim Motions",
+  "name": "G-Suite Vim Motions",
   "version": "1.0",
   "permissions": ["activeTab"],
   "content_scripts": [
     {
       "matches": ["https://mail.google.com/mail/u/0/*"],
-      "js": ["content.js"]
+      "js": ["gmail-vim.js"]
     }
   ]
 }
