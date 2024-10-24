@@ -1,8 +1,12 @@
-console.log("gmail-vim loaded");
+console.log("gmail-vim loaded test");
 
 let lastKeyD = false;
 document.addEventListener("keydown", function(event) {
-  if (event.target.tagName.toLowerCase() === "input" || event.target.tagName.toLowerCase() === "textarea") {
+  let target = event.target;
+  if (target.className.includes("editable") ||
+      target.contentEditable === "true" ||
+      target.isContentEditable ||
+      target.role == "textbox") {
     return; // Ignore if typing in a text field
   }
 
